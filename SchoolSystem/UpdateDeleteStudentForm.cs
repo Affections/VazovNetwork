@@ -108,8 +108,9 @@ namespace VazovNetwork
             // the  student age must be between 10-100
             int born_year = dateTimePicker1.Value.Year;
             int this_year = DateTime.Now.Year;
-      
-             if (verify())
+          
+
+            if (verify())
             {
                 StudentImage.Image.Save(picture, StudentImage.Image.RawFormat);
 

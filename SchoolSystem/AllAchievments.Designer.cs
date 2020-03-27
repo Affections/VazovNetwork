@@ -55,6 +55,8 @@
             // 
             this.achievmentsGrid.AllowUserToAddRows = false;
             this.achievmentsGrid.AllowUserToDeleteRows = false;
+            this.achievmentsGrid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.achievmentsGrid.AutoGenerateColumns = false;
             this.achievmentsGrid.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.achievmentsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -75,7 +77,6 @@
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.achievmentsGrid.DefaultCellStyle = dataGridViewCellStyle7;
-            this.achievmentsGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.achievmentsGrid.Location = new System.Drawing.Point(0, 0);
             this.achievmentsGrid.Margin = new System.Windows.Forms.Padding(4);
             this.achievmentsGrid.Name = "achievmentsGrid";
@@ -189,7 +190,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AllAchievments";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Всички постижения";
             this.Load += new System.EventHandler(this.AllAchievments_Load);
             ((System.ComponentModel.ISupportInitialize)(this.achievmentsGrid)).EndInit();

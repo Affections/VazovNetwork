@@ -32,11 +32,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AllSubjects));
             this.subjectsGrid = new System.Windows.Forms.DataGridView();
-            this.subjectBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.subjectBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SpravkaBySubject = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.subjectBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.subjectBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.subjectsGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.subjectBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.subjectBindingSource1)).BeginInit();
@@ -46,6 +46,8 @@
             // 
             this.subjectsGrid.AllowUserToAddRows = false;
             this.subjectsGrid.AllowUserToDeleteRows = false;
+            this.subjectsGrid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.subjectsGrid.AutoGenerateColumns = false;
             this.subjectsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.subjectsGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -72,14 +74,6 @@
             this.subjectsGrid.TabIndex = 1;
             this.subjectsGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.subjectsGrid_CellContentClick);
             // 
-            // subjectBindingSource
-            // 
-            this.subjectBindingSource.DataSource = typeof(Db.Subject);
-            // 
-            // subjectBindingSource1
-            // 
-            this.subjectBindingSource1.DataSource = typeof(Db.Subject);
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
@@ -101,6 +95,14 @@
             this.SpravkaBySubject.Name = "SpravkaBySubject";
             this.SpravkaBySubject.ReadOnly = true;
             // 
+            // subjectBindingSource
+            // 
+            this.subjectBindingSource.DataSource = typeof(Db.Subject);
+            // 
+            // subjectBindingSource1
+            // 
+            this.subjectBindingSource1.DataSource = typeof(Db.Subject);
+            // 
             // AllSubjects
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -112,6 +114,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AllSubjects";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Всички дисциплини";
             this.Load += new System.EventHandler(this.AllSubjects_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.subjectsGrid)).EndInit();

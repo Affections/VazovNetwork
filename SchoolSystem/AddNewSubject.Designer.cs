@@ -38,28 +38,31 @@
             // subjectBox
             // 
             this.subjectBox.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.subjectBox.Location = new System.Drawing.Point(130, 34);
+            this.subjectBox.Location = new System.Drawing.Point(195, 50);
+            this.subjectBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.subjectBox.Name = "subjectBox";
-            this.subjectBox.Size = new System.Drawing.Size(196, 26);
+            this.subjectBox.Size = new System.Drawing.Size(292, 26);
             this.subjectBox.TabIndex = 20;
             this.subjectBox.TextChanged += new System.EventHandler(this.subjectIdBox_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(12, 37);
+            this.label1.Location = new System.Drawing.Point(18, 54);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 20);
+            this.label1.Size = new System.Drawing.Size(107, 19);
             this.label1.TabIndex = 19;
             this.label1.Text = "Дисциплина";
             // 
             // Cancel
             // 
-            this.Cancel.Location = new System.Drawing.Point(16, 88);
+            this.Cancel.Location = new System.Drawing.Point(24, 129);
+            this.Cancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Cancel.Name = "Cancel";
-            this.Cancel.Size = new System.Drawing.Size(71, 32);
+            this.Cancel.Size = new System.Drawing.Size(106, 47);
             this.Cancel.TabIndex = 27;
             this.Cancel.Text = "Откажи";
             this.Cancel.UseVisualStyleBackColor = true;
@@ -67,9 +70,10 @@
             // 
             // AddStudent
             // 
-            this.AddStudent.Location = new System.Drawing.Point(255, 88);
+            this.AddStudent.Location = new System.Drawing.Point(382, 129);
+            this.AddStudent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AddStudent.Name = "AddStudent";
-            this.AddStudent.Size = new System.Drawing.Size(71, 32);
+            this.AddStudent.Size = new System.Drawing.Size(106, 47);
             this.AddStudent.TabIndex = 26;
             this.AddStudent.Text = "Добави";
             this.AddStudent.UseVisualStyleBackColor = true;
@@ -77,15 +81,17 @@
             // 
             // AddNewSubject
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(336, 129);
+            this.ClientSize = new System.Drawing.Size(504, 189);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.AddStudent);
             this.Controls.Add(this.subjectBox);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AddNewSubject";
             this.Text = "Добавене на предмет";
             this.Load += new System.EventHandler(this.AddNewSubject_Load);

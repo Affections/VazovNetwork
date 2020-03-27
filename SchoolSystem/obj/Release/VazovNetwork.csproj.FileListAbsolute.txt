@@ -79,3 +79,4 @@ C:\Users\--------------------\Downloads\affections-vazovnetwork-8d16176ffaf3\Sch
 C:\Users\--------------------\Downloads\affections-vazovnetwork-8d16176ffaf3\SchoolSystem\SchoolSystem\obj\Release\VazovNetwork.pdb
 C:\Users\--------------------\Downloads\affections-vazovnetwork-8d16176ffaf3\SchoolSystem\SchoolSystem\obj\Release\VazovNetwork.AllAchievmentsSortedBySubject.resources
 C:\Users\--------------------\Downloads\affections-vazovnetwork-8d16176ffaf3\SchoolSystem\SchoolSystem\obj\Release\VazovNetwork.AllAchievmentsSortedByCompetitions.resources
+C:\Users\--------------------\Downloads\affections-vazovnetwork-8d16176ffaf3\SchoolSystem\SchoolSystem\obj\Release\VazovNetwork.csprojAssemblyReference.cache
