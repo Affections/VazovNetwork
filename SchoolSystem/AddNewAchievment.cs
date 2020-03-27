@@ -34,20 +34,28 @@ namespace VazovNetwork
         private void AddAchievment_Click(object sender, EventArgs e)
         {
 
-
-            var achievment = new Db.Achievment()
+            try
             {
-                StudentId = int.Parse(studentIdBox.Text),
-                SubjectId = ((Db.Subject)SubjectList.SelectedItem).Id,
-                CompetitionId = ((Db.Competition)CompetitionList.SelectedItem).Id,
-                Year = int.Parse(yearBox.Text),
-                AchievmentExplanation = explanBox.Text,
-                AchievmentReward = rewardBox.Text
-                 
-            };
+                var achievment = new Db.Achievment()
+                {
+                    StudentId = int.Parse(studentIdBox.Text),
+                    SubjectId = ((Db.Subject)SubjectList.SelectedItem).Id,
+                    CompetitionId = ((Db.Competition)CompetitionList.SelectedItem).Id,
+                    Year = int.Parse(yearBox.Text),
+                    AchievmentExplanation = explanBox.Text,
+                    AchievmentReward = rewardBox.Text
+
+                };
+                _db.Achievments.Add(achievment);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("You missed a field", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
 
-            _db.Achievments.Add(achievment);
+            //_db.Achievments.Add(achievment);
             try
             {
                 _db.SaveChanges();

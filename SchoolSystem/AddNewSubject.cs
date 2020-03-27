@@ -32,14 +32,33 @@ namespace VazovNetwork
 
         private void AddSubject_Click(object sender, EventArgs e)
         {
-            var subject = new Db.Subject()
+
+            try
             {
-                Name = subjectBox.Text,
+              
+                if (!String.IsNullOrEmpty(subjectBox.Text))
+                {
+                    var subject = new Db.Subject()
+                    {
+                        Name = subjectBox.Text,
 
-            };
+                    };
+                    _db.Subjects.Add(subject);
+                }
+               else
+                {
+                    MessageBox.Show("Invalid Subject", "Invalid Subject", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Invalid Subject", "Invalid Subject", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
 
-            _db.Subjects.Add(subject);
+            
             try
             {
                 _db.SaveChanges();

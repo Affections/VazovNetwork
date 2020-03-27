@@ -22,14 +22,20 @@ namespace VazovNetwork
             var student = _db.Students.Find(studentId);
             textBoxID.Text = studentId.ToString();
             NameBox.Text = student.Name;
-
-            byte[] imageSource = student.Picture;
-            Bitmap image;
-            using (MemoryStream stream = new MemoryStream(imageSource))
+            try
             {
-                image = new Bitmap(stream);
+                byte[] imageSource = student.Picture;
+                Bitmap image;
+                using (MemoryStream stream = new MemoryStream(imageSource))
+                {
+                    image = new Bitmap(stream);
+                }
+                StudentImage.Image = image;
             }
-            StudentImage.Image = image;
+            catch (Exception)
+            {
+                MessageBox.Show("no image", "Image Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
             StudentId = studentId;
         }

@@ -26,14 +26,32 @@ namespace VazovNetwork
 
         private void AddStudent_Click(object sender, EventArgs e)
         {
-            var competition = new Db.Competition()
+         
+            try
             {
-                Type = competitionBox.Text,
 
-            };
+                if (!String.IsNullOrEmpty(competitionBox.Text))
+                {
+                    var competition = new Db.Competition()
+                    {
+                        Type = competitionBox.Text,
 
+                    };
+                    _db.Competitions.Add(competition);
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Competition", "Invalid Competition", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
-            _db.Competitions.Add(competition);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Invalid Competition", "Invalid Competition", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+           
             try
             {
                 _db.SaveChanges();
