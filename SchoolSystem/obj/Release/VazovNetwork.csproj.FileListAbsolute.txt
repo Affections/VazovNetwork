@@ -62,7 +62,6 @@ C:\Users\--------------------\Downloads\affections-vazovnetwork-8d16176ffaf3\Sch
 C:\Users\--------------------\Downloads\affections-vazovnetwork-8d16176ffaf3\SchoolSystem\SchoolSystem\bin\Release\EntityFramework.SqlServer.xml
 C:\Users\--------------------\Downloads\affections-vazovnetwork-8d16176ffaf3\SchoolSystem\SchoolSystem\bin\Release\MySql.Data.xml
 C:\Users\--------------------\Downloads\affections-vazovnetwork-8d16176ffaf3\SchoolSystem\SchoolSystem\bin\Release\MySql.Data.Entity.EF6.xml
-C:\Users\--------------------\Downloads\affections-vazovnetwork-8d16176ffaf3\SchoolSystem\SchoolSystem\obj\Release\VazovNetwork.csprojAssemblyReference.cache
 C:\Users\--------------------\Downloads\affections-vazovnetwork-8d16176ffaf3\SchoolSystem\SchoolSystem\obj\Release\VazovNetwork.AddNewAchievment.resources
 C:\Users\--------------------\Downloads\affections-vazovnetwork-8d16176ffaf3\SchoolSystem\SchoolSystem\obj\Release\VazovNetwork.AddNewCompetition.resources
 C:\Users\--------------------\Downloads\affections-vazovnetwork-8d16176ffaf3\SchoolSystem\SchoolSystem\obj\Release\VazovNetwork.AddNewStudent.resources
