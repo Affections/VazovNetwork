@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AllSubjects));
             this.subjectsGrid = new System.Windows.Forms.DataGridView();
             this.subjectBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.subjectBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -51,10 +53,22 @@
             this.nameDataGridViewTextBoxColumn,
             this.SpravkaBySubject});
             this.subjectsGrid.DataSource = this.subjectBindingSource;
-            this.subjectsGrid.Location = new System.Drawing.Point(21, 52);
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.subjectsGrid.DefaultCellStyle = dataGridViewCellStyle1;
+            this.subjectsGrid.Location = new System.Drawing.Point(-1, 0);
+            this.subjectsGrid.Margin = new System.Windows.Forms.Padding(4);
             this.subjectsGrid.Name = "subjectsGrid";
             this.subjectsGrid.ReadOnly = true;
-            this.subjectsGrid.Size = new System.Drawing.Size(759, 347);
+            this.subjectsGrid.RowHeadersVisible = false;
+            this.subjectsGrid.RowTemplate.Height = 25;
+            this.subjectsGrid.Size = new System.Drawing.Size(407, 203);
             this.subjectsGrid.TabIndex = 1;
             this.subjectsGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.subjectsGrid_CellContentClick);
             // 
@@ -69,16 +83,17 @@
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Номер";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             this.idDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Име";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.Width = 200;
             // 
             // SpravkaBySubject
             // 
@@ -88,12 +103,16 @@
             // 
             // AllSubjects
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(406, 204);
             this.Controls.Add(this.subjectsGrid);
+            this.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AllSubjects";
-            this.Text = "AllSubjects";
+            this.Text = "Всички дисциплини";
             this.Load += new System.EventHandler(this.AllSubjects_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.subjectsGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.subjectBindingSource)).EndInit();

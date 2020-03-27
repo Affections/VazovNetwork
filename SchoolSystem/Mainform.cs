@@ -78,11 +78,23 @@ namespace VazovNetwork
 
         private void Mainform_Load(object sender, EventArgs e)
         {
-          
+
             DataGridViewColumn column = dataGridView1.Columns[3];
             column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             ((DataGridViewImageColumn)dataGridView1.Columns[3]).ImageLayout = DataGridViewImageCellLayout.Stretch;
             //dataGridView1.Rows[3].Height = 80;
+            //dataGridView1.Dock = DockStyle.Fill;
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridView1.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            dataGridView1.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dataGridView1.BackgroundColor = Color.White;
+
+            dataGridView1.EnableHeadersVisualStyles = false;
+            dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
 
             dataGridView1.RowTemplate.Height = 80;
             refreshGrid();

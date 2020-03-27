@@ -37,10 +37,10 @@
             // 
             // subjectBox
             // 
-            this.subjectBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.subjectBox.Location = new System.Drawing.Point(104, 34);
+            this.subjectBox.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.subjectBox.Location = new System.Drawing.Point(130, 34);
             this.subjectBox.Name = "subjectBox";
-            this.subjectBox.Size = new System.Drawing.Size(222, 26);
+            this.subjectBox.Size = new System.Drawing.Size(196, 26);
             this.subjectBox.TabIndex = 20;
             this.subjectBox.TextChanged += new System.EventHandler(this.subjectIdBox_TextChanged);
             // 
@@ -51,9 +51,9 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(12, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 20);
+            this.label1.Size = new System.Drawing.Size(112, 20);
             this.label1.TabIndex = 19;
-            this.label1.Text = "Предмет";
+            this.label1.Text = "Дисциплина";
             // 
             // Cancel
             // 

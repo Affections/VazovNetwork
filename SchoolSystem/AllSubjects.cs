@@ -14,6 +14,8 @@ namespace VazovNetwork
     {
         public AllSubjects()
         {
+
+         
             InitializeComponent();
         }
         public Db.SchoolDbContext _db = new Db.SchoolDbContext();
@@ -21,6 +23,19 @@ namespace VazovNetwork
         {
 
             var subjects = _db.Subjects.ToList();
+            subjectsGrid.RowTemplate.Height = 30;
+            subjectsGrid.Dock = DockStyle.Fill;
+            subjectsGrid.BorderStyle = BorderStyle.None;
+            subjectsGrid.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            subjectsGrid.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            subjectsGrid.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            subjectsGrid.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            subjectsGrid.BackgroundColor = Color.White;
+
+            subjectsGrid.EnableHeadersVisualStyles = false;
+            subjectsGrid.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            subjectsGrid.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            subjectsGrid.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             subjectsGrid.DataSource = subjects;
             subjectsGrid.Refresh();
 

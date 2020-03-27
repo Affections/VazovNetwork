@@ -29,17 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AllAchievmentsSortedByCompetitions));
             this.achievmentsGrid = new System.Windows.Forms.DataGridView();
-            this.achievmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.StudentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CompetitioName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubjectName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.yearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.achievmentExplanationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.achievmentRewardDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.achievmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.achievmentsGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.achievmentBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -59,17 +61,24 @@
             this.achievmentExplanationDataGridViewTextBoxColumn,
             this.achievmentRewardDataGridViewTextBoxColumn});
             this.achievmentsGrid.DataSource = this.achievmentBindingSource;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(0, 4, 0, 4);
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.achievmentsGrid.DefaultCellStyle = dataGridViewCellStyle4;
             this.achievmentsGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.achievmentsGrid.Location = new System.Drawing.Point(0, 0);
+            this.achievmentsGrid.Margin = new System.Windows.Forms.Padding(4);
             this.achievmentsGrid.Name = "achievmentsGrid";
             this.achievmentsGrid.ReadOnly = true;
             this.achievmentsGrid.RowHeadersVisible = false;
-            this.achievmentsGrid.Size = new System.Drawing.Size(800, 450);
+            this.achievmentsGrid.RowTemplate.Height = 25;
+            this.achievmentsGrid.Size = new System.Drawing.Size(1200, 658);
             this.achievmentsGrid.TabIndex = 2;
-            // 
-            // achievmentBindingSource
-            // 
-            this.achievmentBindingSource.DataSource = typeof(Db.Achievment);
             // 
             // StudentName
             // 
@@ -82,7 +91,7 @@
             this.StudentName.HeaderText = "Име";
             this.StudentName.Name = "StudentName";
             this.StudentName.ReadOnly = true;
-            this.StudentName.Width = 54;
+            this.StudentName.Width = 64;
             // 
             // CompetitioName
             // 
@@ -95,7 +104,7 @@
             this.CompetitioName.HeaderText = "Състезание";
             this.CompetitioName.Name = "CompetitioName";
             this.CompetitioName.ReadOnly = true;
-            this.CompetitioName.Width = 93;
+            this.CompetitioName.Width = 117;
             // 
             // SubjectName
             // 
@@ -108,7 +117,7 @@
             this.SubjectName.HeaderText = "Дисциплина";
             this.SubjectName.Name = "SubjectName";
             this.SubjectName.ReadOnly = true;
-            this.SubjectName.Width = 95;
+            this.SubjectName.Width = 122;
             // 
             // yearDataGridViewTextBoxColumn
             // 
@@ -131,14 +140,22 @@
             this.achievmentRewardDataGridViewTextBoxColumn.Name = "achievmentRewardDataGridViewTextBoxColumn";
             this.achievmentRewardDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // achievmentBindingSource
+            // 
+            this.achievmentBindingSource.DataSource = typeof(Db.Achievment);
+            // 
             // AllAchievmentsSortedByCompetitions
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1200, 658);
             this.Controls.Add(this.achievmentsGrid);
+            this.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AllAchievmentsSortedByCompetitions";
-            this.Text = "AllAchievmentsSortedByCompetitions";
+            this.Text = "Справка по състезания";
             ((System.ComponentModel.ISupportInitialize)(this.achievmentsGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.achievmentBindingSource)).EndInit();
             this.ResumeLayout(false);

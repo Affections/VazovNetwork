@@ -16,6 +16,18 @@ namespace VazovNetwork
         {
 
             InitializeComponent();
+            achievmentsGrid.Dock = DockStyle.Fill;
+            achievmentsGrid.BorderStyle = BorderStyle.None;
+            achievmentsGrid.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            achievmentsGrid.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            achievmentsGrid.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            achievmentsGrid.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            achievmentsGrid.BackgroundColor = Color.White;
+
+            achievmentsGrid.EnableHeadersVisualStyles = false;
+            achievmentsGrid.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            achievmentsGrid.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            achievmentsGrid.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             refreshGrid(subjectId);
         }
         public Db.SchoolDbContext _db = new Db.SchoolDbContext();

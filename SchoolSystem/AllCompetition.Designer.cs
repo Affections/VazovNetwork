@@ -30,14 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AllCompetition));
             this.competitionsGrid = new System.Windows.Forms.DataGridView();
-            this.competitionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.SpravkaByCompetitions = new System.Windows.Forms.DataGridViewButtonColumn();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SpravkaByCompetitions = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.competitionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.competitionsGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.competitionBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -72,9 +73,19 @@
             this.competitionsGrid.TabIndex = 1;
             this.competitionsGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.competitionsGrid_CellContentClick);
             // 
-            // competitionBindingSource
+            // SpravkaByCompetitions
             // 
-            this.competitionBindingSource.DataSource = typeof(Db.Competition);
+            this.SpravkaByCompetitions.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SpravkaByCompetitions.DataPropertyName = "Справка";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.SpravkaByCompetitions.DefaultCellStyle = dataGridViewCellStyle3;
+            this.SpravkaByCompetitions.HeaderText = "Справка";
+            this.SpravkaByCompetitions.Name = "SpravkaByCompetitions";
+            this.SpravkaByCompetitions.ReadOnly = true;
+            this.SpravkaByCompetitions.Text = "Справка";
+            this.SpravkaByCompetitions.ToolTipText = "Справка";
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -106,19 +117,9 @@
             this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
             this.typeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // SpravkaByCompetitions
+            // competitionBindingSource
             // 
-            this.SpravkaByCompetitions.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.SpravkaByCompetitions.DataPropertyName = "Справка";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            this.SpravkaByCompetitions.DefaultCellStyle = dataGridViewCellStyle3;
-            this.SpravkaByCompetitions.HeaderText = "Справка";
-            this.SpravkaByCompetitions.Name = "SpravkaByCompetitions";
-            this.SpravkaByCompetitions.ReadOnly = true;
-            this.SpravkaByCompetitions.Text = "Справка";
-            this.SpravkaByCompetitions.ToolTipText = "Справка";
+            this.competitionBindingSource.DataSource = typeof(Db.Competition);
             // 
             // AllCompetition
             // 
@@ -129,10 +130,11 @@
             this.Controls.Add(this.competitionsGrid);
             this.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AllCompetition";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AllCompetition";
+            this.Text = "Всички състезания";
             this.Load += new System.EventHandler(this.AllCompetition_Load);
             ((System.ComponentModel.ISupportInitialize)(this.competitionsGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.competitionBindingSource)).EndInit();
