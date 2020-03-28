@@ -256,7 +256,7 @@
             this.Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Date.DataPropertyName = "Date";
             this.Date.FillWeight = 48.85786F;
-            this.Date.HeaderText = "Дата";
+            this.Date.HeaderText = "Клас";
             this.Date.Name = "Date";
             this.Date.ReadOnly = true;
             this.Date.Width = 161;

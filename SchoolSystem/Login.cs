@@ -34,38 +34,38 @@ namespace VazovNetwork
                     }
                        );
 
-                    var student = new Db.Student()
-                    {
-                        Name = "blago",
-                        Date = DateTime.Now
-                        
-                    };
+                    //var student = new Db.Student()
+                    //{
+                    //    Name = "blago",
+                    //    Class = "5 клас"
 
-                    var achievement = new Db.Achievment()
-                    {
-                        Year = 2002,
-                        AchievmentExplanation = "Бургас 20.03.2020 Международен конкурс",
-                        AchievmentReward = "Медал 1-во място",
-                        
-                    };
+                    //};
+
+                    //var achievement = new Db.Achievment()
+                    //{
+                    //    Year = 2002,
+                    //    AchievmentExplanation = "Бургас 20.03.2020 Международен конкурс",
+                    //    AchievmentReward = "Медал 1-во място",
+
+                    //};
 
 
-                    student.Achievments.Add(achievement);
+                    //student.Achievments.Add(achievement);
 
-                    achievement.Subject = new Db.Subject()
-                    {
-                        Name = "English"
-                        
-                    };
-                    achievement.Competition = new Db.Competition()
-                    {
-                        Type = "Общински"
+                    //achievement.Subject = new Db.Subject()
+                    //{
+                    //    Name = "English"
 
-                    };
+                    //};
+                    //achievement.Competition = new Db.Competition()
+                    //{
+                    //    Type = "Общински"
 
-                    _db.Students.Add(student);
-                     
-                     
+                    //};
+
+                    //_db.Students.Add(student);
+
+
                     _db.SaveChanges();
                 }
             }

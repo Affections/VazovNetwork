@@ -22,6 +22,7 @@ namespace VazovNetwork
             var student = _db.Students.Find(studentId);
             textBoxID.Text = studentId.ToString();
             NameBox.Text = student.Name;
+            textBoxClass.Text = student.Class;
             try
             {
                 byte[] imageSource = student.Picture;
@@ -106,14 +107,15 @@ namespace VazovNetwork
             int id = Convert.ToInt32(textBoxID.Text);
             var student = _db.Students.Find(id);
             string name = NameBox.Text;
-            DateTime date = dateTimePicker1.Value;
+            //DateTime date = dateTimePicker1.Value;
+            string classS = textBoxClass.Text;
         
             MemoryStream picture = new MemoryStream();
 
             // we need to check the age of the student 
-            // the  student age must be between 10-100
-            int born_year = dateTimePicker1.Value.Year;
-            int this_year = DateTime.Now.Year;
+            //// the  student age must be between 10-100
+            //int born_year = dateTimePicker1.Value.Year;
+            //int this_year = DateTime.Now.Year;
           
 
             if (verify())
@@ -121,7 +123,7 @@ namespace VazovNetwork
                 StudentImage.Image.Save(picture, StudentImage.Image.RawFormat);
 
                 student.Name = name;
-                student.Date = date; 
+                student.Class = classS; 
                 student.Picture = picture.ToArray();
 
                 try
@@ -269,6 +271,11 @@ namespace VazovNetwork
             {
                 MessageBox.Show("student not deleted", "delete student", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void textBoxClass_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

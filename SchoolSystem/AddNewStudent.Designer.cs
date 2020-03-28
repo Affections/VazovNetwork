@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddNewStudent));
             this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.StudentImage = new System.Windows.Forms.PictureBox();
             this.Upload = new System.Windows.Forms.Button();
@@ -38,6 +37,7 @@
             this.Cancel = new System.Windows.Forms.Button();
             this.NameBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.classTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.StudentImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,23 +49,10 @@
             this.label3.Location = new System.Drawing.Point(44, 136);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 19);
+            this.label3.Size = new System.Drawing.Size(47, 19);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Дата";
+            this.label3.Text = "Клас";
             this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(207, 126);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker1.MaxDate = new System.DateTime(2100, 7, 16, 0, 0, 0, 0);
-            this.dateTimePicker1.MinDate = new System.DateTime(1995, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(331, 26);
-            this.dateTimePicker1.TabIndex = 5;
-            this.dateTimePicker1.Value = new System.DateTime(2013, 1, 1, 0, 0, 0, 0);
             // 
             // label7
             // 
@@ -145,19 +132,30 @@
             this.label1.Text = "Пълно Име";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // classTextBox
+            // 
+            this.classTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.classTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.classTextBox.Location = new System.Drawing.Point(207, 132);
+            this.classTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.classTextBox.Name = "classTextBox";
+            this.classTextBox.Size = new System.Drawing.Size(331, 26);
+            this.classTextBox.TabIndex = 18;
+            this.classTextBox.TextChanged += new System.EventHandler(this.classTextBox_TextChanged);
+            // 
             // AddNewStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(560, 574);
+            this.Controls.Add(this.classTextBox);
             this.Controls.Add(this.NameBox);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.AddStudent);
             this.Controls.Add(this.Upload);
             this.Controls.Add(this.StudentImage);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -176,7 +174,6 @@
 
         #endregion
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox StudentImage;
         private System.Windows.Forms.Button Upload;
@@ -184,5 +181,6 @@
         private System.Windows.Forms.Button Cancel;
         private System.Windows.Forms.TextBox NameBox;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox classTextBox;
     }
 }

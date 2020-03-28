@@ -54,19 +54,19 @@ namespace VazovNetwork
 
             //we need to check the age of the student
 
-            int born_year = dateTimePicker1.Value.Year;
-            int this_year = DateTime.Now.Year;
+            //int born_year = dateTimePicker1.Value.Year;
+            //int this_year = DateTime.Now.Year;
            
            if (verify())
             {
                 StudentImage.Image.Save(picture, StudentImage.Image.RawFormat);
-              
+
 
                 var student = new Db.Student()
                 {
                     Name = NameBox.Text,
-                    
-                    Date = dateTimePicker1.Value,
+
+                    Class = classTextBox.Text,
                     Picture = picture.ToArray()
 
                 };
@@ -127,6 +127,11 @@ namespace VazovNetwork
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void classTextBox_TextChanged(object sender, EventArgs e)
         {
 
         }

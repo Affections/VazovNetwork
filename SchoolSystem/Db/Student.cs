@@ -8,7 +8,7 @@ namespace VazovNetwork.Db
 
         public int Id { get; set; }
         public string Name { get; set; }     
-        public DateTime Date { get; set; }
+        public string Class { get; set; }
         public byte[] Picture { get; set; }
 
         public ICollection<Achievment> Achievments { get; set; } = new List<Achievment>();

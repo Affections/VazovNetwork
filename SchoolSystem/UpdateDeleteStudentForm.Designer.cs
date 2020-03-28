@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateDeleteStudentForm));
             this.buttonRemove = new System.Windows.Forms.Button();
             this.buttonEdit = new System.Windows.Forms.Button();
-            this.NameBox = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -41,6 +39,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxID = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.NameBox = new System.Windows.Forms.TextBox();
+            this.textBoxClass = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.StudentImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,24 +70,6 @@
             this.buttonEdit.UseVisualStyleBackColor = false;
             this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
-            // NameBox
-            // 
-            this.NameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.NameBox.Location = new System.Drawing.Point(119, 116);
-            this.NameBox.Name = "NameBox";
-            this.NameBox.Size = new System.Drawing.Size(222, 26);
-            this.NameBox.TabIndex = 40;
-            this.NameBox.TextChanged += new System.EventHandler(this.NameBox_TextChanged);
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(119, 174);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 37;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -95,9 +77,9 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label3.Location = new System.Drawing.Point(16, 175);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 19);
+            this.label3.Size = new System.Drawing.Size(47, 19);
             this.label3.TabIndex = 36;
-            this.label3.Text = "Дата";
+            this.label3.Text = "Клас";
             // 
             // label1
             // 
@@ -174,17 +156,35 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.AddAchievment_Click);
             // 
+            // NameBox
+            // 
+            this.NameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NameBox.Location = new System.Drawing.Point(119, 116);
+            this.NameBox.Name = "NameBox";
+            this.NameBox.Size = new System.Drawing.Size(222, 26);
+            this.NameBox.TabIndex = 40;
+            this.NameBox.TextChanged += new System.EventHandler(this.NameBox_TextChanged);
+            // 
+            // textBoxClass
+            // 
+            this.textBoxClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxClass.Location = new System.Drawing.Point(119, 175);
+            this.textBoxClass.Name = "textBoxClass";
+            this.textBoxClass.Size = new System.Drawing.Size(222, 26);
+            this.textBoxClass.TabIndex = 45;
+            this.textBoxClass.TextChanged += new System.EventHandler(this.textBoxClass_TextChanged);
+            // 
             // UpdateDeleteStudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(776, 369);
+            this.Controls.Add(this.textBoxClass);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBoxID);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.NameBox);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonRemove);
@@ -215,8 +215,8 @@
         internal System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.Label label2;
         internal System.Windows.Forms.TextBox textBoxID;
-        internal System.Windows.Forms.TextBox NameBox;
-        internal System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button button1;
+        internal System.Windows.Forms.TextBox NameBox;
+        internal System.Windows.Forms.TextBox textBoxClass;
     }
 }
