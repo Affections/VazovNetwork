@@ -14,7 +14,7 @@ namespace VazovNetwork.ViewModels
       
         public string Name { get; set; }
 
-        public DateTime Date { get; set; }
+        public string Class { get; set; }
 
         public byte[] Picture { get; set; }
 

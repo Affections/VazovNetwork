@@ -43,6 +43,7 @@
             this.добавиСъстезаниеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.списъкСъстезанияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.stundetmodelBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.stundetmodelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.studentModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mySqlDataAdapter1 = new MySql.Data.MySqlClient.MySqlDataAdapter();
@@ -54,6 +55,7 @@
             this.Постижения = new System.Windows.Forms.DataGridViewButtonColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stundetmodelBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stundetmodelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentModelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.achievmentBindingSource)).BeginInit();
@@ -194,7 +196,7 @@
             this.Date,
             this.pictureDataGridViewImageColumn,
             this.Постижения});
-            this.dataGridView1.DataSource = this.stundetmodelBindingSource;
+            this.dataGridView1.DataSource = this.stundetmodelBindingSource1;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -215,6 +217,10 @@
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            // 
+            // stundetmodelBindingSource1
+            // 
+            this.stundetmodelBindingSource1.DataSource = typeof(ViewModels.Stundetmodel);
             // 
             // stundetmodelBindingSource
             // 
@@ -254,7 +260,7 @@
             // Date
             // 
             this.Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.Date.DataPropertyName = "Date";
+            this.Date.DataPropertyName = "Class";
             this.Date.FillWeight = 48.85786F;
             this.Date.HeaderText = "Клас";
             this.Date.Name = "Date";
@@ -300,6 +306,7 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stundetmodelBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stundetmodelBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentModelBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.achievmentBindingSource)).EndInit();
@@ -327,6 +334,7 @@
         private System.Windows.Forms.ToolStripMenuItem списъкНаВсичкиПостиженияToolStripMenuItem;
         private System.Windows.Forms.BindingSource achievmentBindingSource;
         private System.Windows.Forms.BindingSource stundetmodelBindingSource;
+        private System.Windows.Forms.BindingSource stundetmodelBindingSource1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;

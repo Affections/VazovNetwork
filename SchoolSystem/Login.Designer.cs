@@ -79,6 +79,7 @@
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(159, 20);
             this.username.TabIndex = 4;
+            this.username.Text = "admin";
             this.username.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // password
@@ -87,6 +88,7 @@
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(159, 20);
             this.password.TabIndex = 5;
+            this.password.Text = "admin";
             this.password.UseSystemPasswordChar = true;
             // 
             // LoginButton
