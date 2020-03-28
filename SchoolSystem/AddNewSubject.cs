@@ -47,27 +47,27 @@ namespace VazovNetwork
                 }
                else
                 {
-                    MessageBox.Show("Invalid Subject", "Invalid Subject", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Невалидна дисциплина", "Грешка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
             }
             catch (Exception)
             {
-                MessageBox.Show("Invalid Subject", "Invalid Subject", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                MessageBox.Show("Невалидна дисциплина", "Грешка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } 
 
 
             
             try
             {
                 _db.SaveChanges();
-                MessageBox.Show("new subject added", "subject achievment", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Беше добавена нова дисциплина", "Добавяне на дисциплина", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.DialogResult = DialogResult.OK;
             }
             catch (Exception)
             {
-                MessageBox.Show("error", "subject achievment", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Не можа да бъде добавена нова дисциплина", "Грешка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }

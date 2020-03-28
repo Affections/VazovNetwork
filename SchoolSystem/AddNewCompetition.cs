@@ -41,26 +41,26 @@ namespace VazovNetwork
                 }
                 else
                 {
-                    MessageBox.Show("Invalid Competition", "Invalid Competition", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Невалидно състезание", "Грешка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
             }
             catch (Exception)
             {
-                MessageBox.Show("Invalid Competition", "Invalid Competition", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Невалидно състезание", "Грешка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
            
             try
             {
                 _db.SaveChanges();
-                MessageBox.Show("new competition added", "competition add", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Ново състезание беше добавено", "Добавяне на състезание", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.DialogResult = DialogResult.OK;
             }
             catch (Exception)
             {
-                MessageBox.Show("error", "competition add", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Състезанието не можа да бъде добавено", "Грешка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

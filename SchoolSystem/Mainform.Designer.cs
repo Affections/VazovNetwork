@@ -44,9 +44,9 @@
             this.списъкСъстезанияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.stundetmodelBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.mySqlDataAdapter1 = new MySql.Data.MySqlClient.MySqlDataAdapter();
             this.stundetmodelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.studentModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.mySqlDataAdapter1 = new MySql.Data.MySqlClient.MySqlDataAdapter();
             this.achievmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -222,6 +222,13 @@
             // 
             this.stundetmodelBindingSource1.DataSource = typeof(ViewModels.Stundetmodel);
             // 
+            // mySqlDataAdapter1
+            // 
+            this.mySqlDataAdapter1.DeleteCommand = null;
+            this.mySqlDataAdapter1.InsertCommand = null;
+            this.mySqlDataAdapter1.SelectCommand = null;
+            this.mySqlDataAdapter1.UpdateCommand = null;
+            // 
             // stundetmodelBindingSource
             // 
             this.stundetmodelBindingSource.DataSource = typeof(ViewModels.Stundetmodel);
@@ -229,13 +236,6 @@
             // studentModelBindingSource
             // 
             this.studentModelBindingSource.CurrentChanged += new System.EventHandler(this.studentModelBindingSource_CurrentChanged);
-            // 
-            // mySqlDataAdapter1
-            // 
-            this.mySqlDataAdapter1.DeleteCommand = null;
-            this.mySqlDataAdapter1.InsertCommand = null;
-            this.mySqlDataAdapter1.SelectCommand = null;
-            this.mySqlDataAdapter1.UpdateCommand = null;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -255,7 +255,7 @@
             this.nameDataGridViewTextBoxColumn.HeaderText = "Име";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nameDataGridViewTextBoxColumn.Width = 161;
+            this.nameDataGridViewTextBoxColumn.Width = 180;
             // 
             // Date
             // 
@@ -273,9 +273,10 @@
             this.pictureDataGridViewImageColumn.DataPropertyName = "Picture";
             this.pictureDataGridViewImageColumn.FillWeight = 304.5685F;
             this.pictureDataGridViewImageColumn.HeaderText = "Снимка";
+            this.pictureDataGridViewImageColumn.Image = global::VazovNetwork.Properties.Resources.noimageavailble;
+            this.pictureDataGridViewImageColumn.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
             this.pictureDataGridViewImageColumn.Name = "pictureDataGridViewImageColumn";
             this.pictureDataGridViewImageColumn.ReadOnly = true;
-            this.pictureDataGridViewImageColumn.Width = 120;
             // 
             // Постижения
             // 

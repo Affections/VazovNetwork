@@ -35,7 +35,7 @@ namespace VazovNetwork
             }
             catch (Exception)
             {
-                MessageBox.Show("no image", "Image Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Няма снимка", "Image Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             StudentId = studentId;
@@ -47,20 +47,9 @@ namespace VazovNetwork
 
         
 
-        private void label2_Click(object sender, EventArgs e)
-        {
+     
 
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click_1(object sender, EventArgs e)
-        {
-
-        }
+     
 
         private void Upload_Click(object sender, EventArgs e)
         {
@@ -75,7 +64,7 @@ namespace VazovNetwork
             }
         }
 
-        //create a function to verify data 
+       
         bool verify()
         {
             if ((NameBox.Text.Trim() == "") ||                
@@ -101,134 +90,100 @@ namespace VazovNetwork
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
-            // updpate the selected student 
-            //add new student
-            //STUDENT student = new STUDENT();
+            
             int id = Convert.ToInt32(textBoxID.Text);
             var student = _db.Students.Find(id);
             string name = NameBox.Text;
-            //DateTime date = dateTimePicker1.Value;
+           
             string classS = textBoxClass.Text;
         
             MemoryStream picture = new MemoryStream();
 
-            // we need to check the age of the student 
-            //// the  student age must be between 10-100
-            //int born_year = dateTimePicker1.Value.Year;
-            //int this_year = DateTime.Now.Year;
+        
           
 
             if (verify())
             {
-                StudentImage.Image.Save(picture, StudentImage.Image.RawFormat);
-
-                student.Name = name;
-                student.Class = classS; 
-                student.Picture = picture.ToArray();
+               
 
                 try
                 {
+                    try
+                    {
+                        StudentImage.Image.Save(picture, StudentImage.Image.RawFormat);
+                    }
+                    catch (Exception)
+                    {
+
+                        
+                    }
+                    try
+                    {
+                        if(!String.IsNullOrEmpty(name))
+                        {
+                            student.Name = name;
+                        }
+                       
+                    }
+                    catch (Exception)
+                    {
+
+                        
+                    }
+                    try
+                    {
+                        if(!String.IsNullOrEmpty(classS))
+                        {
+                            student.Class = classS;
+                        }
+                        
+                    }
+                    catch (Exception)
+                    {
+
+                        
+                    }
+                    try
+                    {
+                          student.Picture = picture.ToArray();
+                        
+                        
+                    }
+                    catch (Exception)
+                    {
+
+                       
+                    }
+                  
                     _db.SaveChanges();
                     this.DialogResult = DialogResult.OK;
-                    MessageBox.Show("student info updated", "edit Student", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Информацията за ученика е обновена", "Успешна промяна", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Error", "edit Student", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    
+                    this.DialogResult = DialogResult.OK;
+                    MessageBox.Show("Няма промени", "Грешка", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
+              
+           
             }
             else
             {
-                MessageBox.Show("Empy Fields", "edit Student", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Има празни полета!", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             }
         }
 
 
 
-        private void buttonRemove_Click(object sender, EventArgs e)
-        {
-            //STUDENT student = new STUDENT();
-            //// remove the selected student
-            //int id = Convert.ToInt32(textBoxID.Text);
+     
 
-            //// show a confirmation message before deleting the student 
-            //if (MessageBox.Show("are you sure you want to delete current student?", "delete student", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            //{
-            //    if (student.deleteStudent(id))
-            //    {
-            //        MessageBox.Show("student deleted", "delete student", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //        // clear fields 
-            //        textBoxID.Text = "";
-            //        NameBox.Text = "";
-            //        PhoneBox.Text = "";
-            //        AchievmentsBox.Text = "";
-            //        dateTimePicker1.Value = DateTime.Now;
-            //        StudentImage.Image = null;
+       
 
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("student not deleted", "delete student", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    }
-            //}
-
-
-
-            //if (MessageBox.Show("are you sure you want to delete current student?", "delete student", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            //{
-
-            //    MessageBox.Show("student deleted", "delete student", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    // clear fields                  
-            //    student.Id = int.Parse("");
-            //    student.Name = "";
-            //    //student.Achievments = "";
-            //    //student.Picture = "";
-            //    //student.Date = "";
-
-
-
-
-            //}
-            //else
-            //{
-            //    MessageBox.Show("student not deleted", "delete student", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-          
-
-        }
-
-        //private void buttonFind_Click(object sender, EventArgs e)
-        //{
-        //    STUDENT student = new STUDENT();
-
-        //    // search student by id
-        //    int id = Convert.ToInt32(textBoxID.Text);
-        //    MySqlCommand command = new MySqlCommand($"SELECT `id`, `Name`, `Date`, `Phone`, `Achievments`, `Picture` FROM `student` WHERE `id`={id}");
-
-        //    DataTable table = student.getStudents(command);
-
-
-        //    if (table.Rows.Count > 0)
-        //    {
-
-        //        NameBox.Text = table.Rows[0]["Name"].ToString();
-        //        PhoneBox.Text = table.Rows[0]["Phone"].ToString();
-        //        AchievmentsBox.Text = table.Rows[0]["Achievments"].ToString();
-        //        dateTimePicker1.Value = (DateTime)table.Rows[0]["Date"];
-
-
-
-        //        byte[] pic = (byte[])table.Rows[0]["Picture"];
-        //        MemoryStream picture = new MemoryStream(pic);
-        //        StudentImage.Image = Image.FromStream(picture);
-
-        //    }
-        //}
-
-        //allow only numbers on key press
+       
         private void textBoxID_KeyPress(object sender, KeyPressEventArgs e)
         {
 
@@ -256,7 +211,7 @@ namespace VazovNetwork
             int id = Convert.ToInt32(textBoxID.Text);
             var student = _db.Students.Find(id);
         
-            if (MessageBox.Show("are you sure you want to delete current student?", "delete student", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Сигурни ли сте, че искате да изтриете този ученик ?", "Изтриване на ученик", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
               
 
@@ -269,7 +224,7 @@ namespace VazovNetwork
             }
             else
             {
-                MessageBox.Show("student not deleted", "delete student", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ученикът не е изтрит", "Грешка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -92,7 +92,7 @@ namespace VazovNetwork
             }
             catch (Exception)
             {
-                MessageBox.Show("invalid username or password", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Грешно име или парола", "Грешка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 

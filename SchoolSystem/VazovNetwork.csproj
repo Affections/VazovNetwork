@@ -260,6 +260,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="640_198781.ico" />
+    <None Include="Resources\noimageavailble.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

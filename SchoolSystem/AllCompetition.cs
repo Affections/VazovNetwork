@@ -45,7 +45,7 @@ namespace VazovNetwork
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
                 e.RowIndex >= 0)
             {
-                //TODO - Button Clicked - Execute Code Here
+               
                 var cell = competitionsGrid.Rows[e.RowIndex].Cells[0].Value;
                 int competitionId = int.Parse(cell.ToString());
                 AllAchievmentsSortedByCompetitions allAchievmentsF = new AllAchievmentsSortedByCompetitions(competitionId);

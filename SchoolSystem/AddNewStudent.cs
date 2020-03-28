@@ -30,7 +30,7 @@ namespace VazovNetwork
 
         private void Upload_Click(object sender, EventArgs e)
         {
-            // browse image from your computer
+            
             OpenFileDialog opf = new OpenFileDialog();
             opf.Filter = "Select Image(*.jpg;*.png;*.gif)|*.jpg;*.png;*.gif";
 
@@ -43,20 +43,8 @@ namespace VazovNetwork
         }
 
         private void AddStudent_Click(object sender, EventArgs e)
-        {
-            //add new student
-
-
-            MemoryStream picture = new MemoryStream();
-            
-    
-           
-
-            //we need to check the age of the student
-
-            //int born_year = dateTimePicker1.Value.Year;
-            //int this_year = DateTime.Now.Year;
-           
+        {      
+            MemoryStream picture = new MemoryStream();        
            if (verify())
             {
                 StudentImage.Image.Save(picture, StudentImage.Image.RawFormat);
@@ -77,17 +65,17 @@ namespace VazovNetwork
                 try
                 {
                     _db.SaveChanges();
-                    MessageBox.Show("new student added", "add student", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Беше добавен нов ученик/отбор", "Добавяне на нов ученик", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.DialogResult = DialogResult.OK;
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("error", "add student", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Не можа да се добави нов ученик/отбор", "Грешка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             } 
             else
             {
-                MessageBox.Show("Empy Fields", "Add Student", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Има празни полета", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             }
 
@@ -95,8 +83,6 @@ namespace VazovNetwork
 
 
         }
-
-        //create a function to verify data 
         bool verify()
         {
             if((NameBox.Text.Trim() == "") ||                      

@@ -53,11 +53,7 @@ namespace VazovNetwork
 
         private void editRemoveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-        //    var cell = dataGridView1.Rows[e.RowIndex].Cells[0].Value;
-
-        //    int studentId = int.Parse(cell.ToString());
-        //    UpdateDeleteStudentForm upDelStdF = new UpdateDeleteStudentForm(studentId);
-        //    upDelStdF.Show();
+        
 
         }
 
@@ -82,8 +78,7 @@ namespace VazovNetwork
             DataGridViewColumn column = dataGridView1.Columns[3];
             column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             ((DataGridViewImageColumn)dataGridView1.Columns[3]).ImageLayout = DataGridViewImageCellLayout.Stretch;
-            //dataGridView1.Rows[3].Height = 80;
-            //dataGridView1.Dock = DockStyle.Fill;
+          
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
             dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
@@ -96,7 +91,7 @@ namespace VazovNetwork
             dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
             dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
 
-            dataGridView1.RowTemplate.Height = 80;
+            dataGridView1.RowTemplate.Height = 100;
             refreshGrid();
         }
 
@@ -117,7 +112,7 @@ namespace VazovNetwork
 
             if (updateDeleteStd.ShowDialog() == DialogResult.OK)
             {
-                
+              
             }
         }
 
@@ -198,13 +193,7 @@ namespace VazovNetwork
 
         private void всичкиУченициотбориToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //AllStudents allStudentsF = new AllStudents();
-
-            //if (allStudentsF.ShowDialog() == DialogResult.OK)
-            //{
-            //    allStudentsF.Close();
-            //    refreshGrid();
-            //}
+           
         }
 
         private void списъкПредметиToolStripMenuItem_Click(object sender, EventArgs e)
@@ -243,23 +232,6 @@ namespace VazovNetwork
 
 
 
-        /* private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
-         {
-             //display the selected student  in a new form to edit/remvoe
-             UpdateDeleteStudentForm updateDeleteStdF = new UpdateDeleteStudentForm();
-             updateDeleteStdF.textBoxID.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-             updateDeleteStdF.NameBox.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-             updateDeleteStdF.dateTimePicker1.Value = (DateTime)dataGridView1.CurrentRow.Cells[2].Value;
-             updateDeleteStdF.PhoneBox.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-             updateDeleteStdF.AchievmentsBox.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-
-             //the image
-
-             byte[] pic;
-             pic = (byte[])dataGridView1.CurrentRow.Cells[5].Value;
-             MemoryStream picture = new MemoryStream(pic);
-             updateDeleteStdF.StudentImage.Image = Image.FromStream(picture);
-             updateDeleteStdF.Show(); 
-         } */
+     
     }
 }

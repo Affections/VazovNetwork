@@ -50,21 +50,21 @@ namespace VazovNetwork
             }
             catch (Exception)
             {
-                MessageBox.Show("You missed a field", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Пропуснахте поле", "Грешка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
 
-            //_db.Achievments.Add(achievment);
+        
             try
             {
                 _db.SaveChanges();
-                MessageBox.Show("new achievment added", "add achievment", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Ново постижение е добавено", "Добавяне на постижение", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.DialogResult = DialogResult.OK;
             }
             catch (Exception)
             {
-                MessageBox.Show("error", "add achievment", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Постижението не можа да бъде добавено", "Грешка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }

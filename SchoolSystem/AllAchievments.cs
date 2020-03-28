@@ -85,22 +85,7 @@ namespace VazovNetwork
             achievmentsGrid.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
 
-        //private void achievmentsGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        //{
-
-        //}
-
-        //   private void AllAchievments_Load(object sender, EventArgs e)
-        //{
-
-        //       var achievments = new Db.Achievment()
-        //       {
-        //            StudentId = st
-
-        //       }
-
-        //       refreshGrid();
-        //   }
+    
 
     }
 }

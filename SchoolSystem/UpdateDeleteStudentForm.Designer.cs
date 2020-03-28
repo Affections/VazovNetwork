@@ -105,6 +105,8 @@
             // 
             // StudentImage
             // 
+            this.StudentImage.ErrorImage = global::VazovNetwork.Properties.Resources.noimageavailble;
+            this.StudentImage.Image = global::VazovNetwork.Properties.Resources.noimageavailble;
             this.StudentImage.Location = new System.Drawing.Point(513, 33);
             this.StudentImage.Name = "StudentImage";
             this.StudentImage.Size = new System.Drawing.Size(222, 97);
